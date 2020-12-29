@@ -1,0 +1,47 @@
+/* 
+IMPORTANTE: USAR UN SOLO DIV
+Colors:
+  Background: #19191A
+  Circle:#4F77FF
+  Rectangle:#F9E492
+  Union: #9AD5FF
+*/
+.bg {
+  width: 400px;
+  height: 300px;
+  background-color: #19191a;
+}
+
+.logo, .logo::after{
+  width: 154px;
+  height: 154px;
+  border-radius: 50%;
+}
+
+.logo{
+  background-color: #4F77FF;
+  position: relative;
+  top: 48px;
+  left: 122px;
+}
+
+.logo::after, .logo::before{
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.logo::before{
+  width: 77px;
+  height: 128px;
+  background-color:#F9E492;
+  top: 77px;
+}
+
+.logo::after{
+  box-sizing: border-box;
+  border: 77px solid transparent;
+  border-left-color: #9AD5FF;
+  transform: rotate(-45deg);
+  top: 0;
+}

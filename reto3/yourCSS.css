@@ -1,0 +1,40 @@
+/* 
+IMPORTANTE: USAR UN SOLO DIV
+Colors:
+  Background: #62374e
+  Squares:#fdc57b
+*/
+.bg {
+  width: 400px;
+  height: 300px;
+  background: #62374e;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.box{
+  width: 300px;
+  height: 200px;
+  background-color: #fdc57b;
+  position: relative;
+}
+
+.box::after, .box::before{
+  content:"";
+  background-color: #62374e;
+  position: absolute;
+}
+
+.box::after{
+  width: 200px;
+  height: 200px;
+  top: 0;
+  left: 50px;
+}
+
+.box::before{
+  width: 300px;
+  height: 100px;
+  top: 50px;
+  left: 0;
+}

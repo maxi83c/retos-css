@@ -1,0 +1,41 @@
+/* 
+IMPORTANTE: USAR UN SOLO DIV
+Colors:
+  Background: #293462
+  Background-circle: #FFF1C1
+  Mountains: #FE5F55
+*/
+.bg {
+  width: 400px;
+  height: 300px;
+  background: #293462;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+.ball{
+  width: 200px;
+  height: 200px;
+  background-color: #fff1c0;
+  border-radius: 50%;
+  overflow: hidden;
+  position:relative;
+}
+
+.ball::after, .ball::before{
+  content:"";
+  width: 150px;
+  height: 150px;
+  background-color: #ff5f54;
+  transform: rotate(45deg);
+  position: absolute;
+}
+.ball::after{
+  top: 160px;
+  left: -46px;
+}
+
+.ball::before{
+  top: 90px;
+  left: 66px;
+}

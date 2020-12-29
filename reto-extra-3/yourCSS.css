@@ -1,0 +1,37 @@
+/* 
+IMPORTANTE: LO HE CONSEGUIDO CON DOS DIVS, SI LO CONSIGUES CON UNO MÁNDAME LA SOLUCIÓN A DISCORD
+Colors:
+  Background: #19191A
+  Blue:#4F77FF
+  Yellow:#F9E492
+*/
+.bg {
+  width: 400px;
+  height: 300px;
+  background-color: #19191a;
+}
+
+.shape, .shape::after{
+  width: 204px;
+  height: 102px;
+  background-size: 204px 102px, 204px 102px, 204px 102px;
+}
+.shape{
+  background-image: 
+    radial-gradient(circle 102px at 25% bottom, #F9E492 50%,  transparent 50%),
+    linear-gradient(90deg, #19191a 50%, transparent 50%),
+    radial-gradient(circle 102px at center center, #4F77FF 50%, transparent 50%);
+  position: relative;
+  top: 49px;
+  left: 98px;
+}
+.shape::after{
+  content: "";
+  background-image: 
+    radial-gradient(circle 102px at 75% top, #F9E492 50%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, #19191a 50%),
+    radial-gradient(circle 102px at center center, #4F77FF 50%,  transparent 50%);
+  position: absolute;
+  top: 102px;
+  left: 0;
+}

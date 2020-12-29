@@ -1,0 +1,47 @@
+/* 
+IMPORTANTE: USAR UN SOLO DIV
+Colors:
+  Background: #5C434C
+  Orange: #F09462
+  Yellow: #F5D6B4
+*/
+.bg {
+  width: 400px;
+  height: 300px;
+  background-color: #5c434c;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.box, .box::after, .box::before{
+  width: 400px;
+  height: 82px;
+  background-size: 200px 82px, 200px 82px, 200px 82px, 200px 82px;
+}
+
+.box{
+  background-image: linear-gradient(90deg, transparent 96%, #5c434c 96%), 
+                    radial-gradient(circle 162px at 96% bottom, #F09462 50%,  transparent 50%),
+                    linear-gradient(90deg, transparent 45%, #5c434c 45%),
+                    radial-gradient(circle 162px at 45% bottom, #F5D6B4 50%,  #5c434c 50%);
+  position: relative;
+}
+
+.box::after, .box::before{
+  content: "";
+  background-image: linear-gradient(90deg, transparent 96%, #5c434c 96%), 
+                    radial-gradient(circle 162px at 96% bottom, #F5D6B4 50%,  transparent 50%),
+                    linear-gradient(90deg, transparent 45%, #5c434c 45%),
+                    radial-gradient(circle 162px at 45% bottom, #F09462 50%,  #5c434c 50%);
+  position: absolute;
+  left: 0;
+}
+
+.box::after{
+  top: -98px;
+}
+
+.box::before{
+  bottom: -98px;
+}
