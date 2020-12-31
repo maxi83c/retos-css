@@ -9,47 +9,48 @@ Colors:
   width: 400px;
   height: 300px;
   background: #1a4341;
+  position: relative;
+  z-index: -2;
 }
 
-.circle{
-  width: 101px;
-  height: 101px;
-  background-image: radial-gradient(circle 30px at 35.5% 35%, #998235 50%,  transparent 50%),
-                    radial-gradient(circle 10px at 76% 25%, #998235 50%,  transparent 50%),
-                    radial-gradient(circle 20px at 49.5% 75%, #998235 50%,  #F3AC3C 50%);
-  border-radius: 50%;
-  position: absolute;
-  top: 51px;
-  left: -46px;
-  z-index: 2;
+.virus{
+  width: 102px;
+  height: 183px;
+  background-color: transparent;
+  background-image:
+  radial-gradient(circle 30px, #998235 50%,   transparent 50%), /* manchas*/
+  radial-gradient(circle 10px, #998235 50%,   transparent 50%),
+  radial-gradient(circle 20px, #998235 50%,   transparent 50%),
+  radial-gradient(circle 10px, #F3AC3C 50%,   transparent 50%), /* stick vertical */
+  radial-gradient(circle 10px, #F3AC3C 50%,   transparent 50%),
+  linear-gradient(90deg, #F3AC3C 100%, transparent 100% ),
+  radial-gradient(circle 100px, #F3AC3C 50%,   transparent 50%); /* circulo virus */
+  background-size: 30px 30px, 10px 10px, 20px 20px, 10px 10px, 10px 10px, 10px 172px, 100px 100px;
+  background-repeat: no-repeat;
+  background-position: 21px 71px, 71px 71px, 41px 117px, 46px 0, 46px 173px, 46px 5px, 0 51px;
+  position: relative;
+  left: 149px;
+  top: 48px;
 }
 
-.stick, .stick::after, .stick::before{
+.virus::after, .virus::before {
+  content: "";
   width: 10px;
   height: 182px;
   background: #F3AC3C;
   border-radius: 5px;
-}
-
-.stick{
-  top: 49px;
-  left: 196px;
-  position: relative;
-}
-
-.stick::after, .stick::before{
-  content: "";
   position: absolute;
+  z-index: -1;
 }
 
-.stick::after{
+.virus::after{
   transform: rotate(60deg);
   top: 5px;
-  left: 10px;
+  left: 56px;
 }
 
-.stick::before{
+.virus::before{
   transform: rotate(-60deg);
-  left: 9px;
   top: 16px;
+  left: 55px;
 }
